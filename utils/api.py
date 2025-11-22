@@ -1,4 +1,4 @@
-from http_methods import HttpMethods                        # импорт класса HttpMethods
+from .http_methods import HttpMethods                        # импорт класса HttpMethods
 
 BASE_URL = "https://rahulshettyacademy.com"
 KEY = "?key=qaclick123"
