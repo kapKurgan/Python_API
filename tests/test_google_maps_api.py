@@ -3,7 +3,7 @@ from ..utils.api import GoogleMapsApi
 
 
 
-class Test_create_place():
+class TestCreatePlace():
     """Класс содержащий тест по работе с локацией"""
 
     def test_create_new_place(self):
