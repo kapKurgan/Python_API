@@ -229,5 +229,5 @@ class AnswersToTask():
         print(result_get.json())
         print(result_get.status_code)
         fields = json.loads(result_get.text)
-        print("=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=",list(fields))
+        print(list(fields))
         return result_get

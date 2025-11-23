@@ -16,6 +16,7 @@ class TestCreatePlace():
         result_post = GoogleMapsApi.create_new_place()          # вызов метода по созданию новой локации
         Checking.check_status_code(result_post, 200)
         Checking.check_json_fields(result_post, ['status', 'place_id', 'scope', 'reference', 'id'])
+        Checking.check_json_value(result_post, 'status', 'OK')
 
         check_post = result_post.json()
         place_id = check_post.get("place_id")                   # получения place_id для метода GET
@@ -39,6 +40,7 @@ class TestCreatePlace():
         result_delete = GoogleMapsApi.delete_new_place(place_id)  # удаление данных о созданной локации
         Checking.check_status_code(result_delete, 200)
         Checking.check_json_fields(result_delete, ['status'])
+        Checking.check_json_value(result_post, 'status', 'OK')
 
         # token = result_delete.json()                             # получить все поля в json из ответа
         # print("token =", list(token))
@@ -47,5 +49,6 @@ class TestCreatePlace():
         result_get = GoogleMapsApi.get_new_place(place_id)  # отправка метода Get
         Checking.check_status_code(result_get, 404)
         Checking.check_json_fields(result_get, ['msg'])
+        Checking.check_json_value(result_get, 'msg', "Get operation failed, looks like place_id  doesn't exists")
 
 
