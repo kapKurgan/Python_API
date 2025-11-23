@@ -39,8 +39,9 @@ class TestCreatePlace():
         result_delete = GoogleMapsApi.delete_new_place(place_id)  # удаление данных о созданной локации
         Checking.check_status_code(result_delete, 200)
         Checking.check_json_fields(result_delete, ['status'])
+
         # token = result_delete.json()                             # получить все поля в json из ответа
-        # print("token =", token)
+        # print("token =", list(token))
 
         print(">>>>>>>>>>>>>   Метод GET DELETE")
         result_get = GoogleMapsApi.get_new_place(place_id)  # отправка метода Get

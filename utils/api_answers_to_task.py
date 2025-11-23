@@ -1,3 +1,5 @@
+import json
+
 import requests
 
 class AnswersToTask():
@@ -205,3 +207,27 @@ class AnswersToTask():
 #        print(result_delete.json())
         print(result_delete.status_code)
         return result_delete
+
+    @staticmethod
+    def create_test_8_8_3():
+        url = "https://catfact.ninja/fact?max_length=100"
+        print("\n#################### create_test_8_8_3")
+        print(url)
+        result_get = requests.get(url)
+        print(result_get.json())
+        print(result_get.status_code)
+        fields = json.loads(result_get.text)
+        print(list(fields))
+        return result_get
+
+    @staticmethod
+    def create_test_8_8_4():
+        url = "https://catfact.ninja/facts?max_length=100&limit=5"
+        print("\n#################### create_test_8_8_4")
+        print(url)
+        result_get = requests.get(url)
+        print(result_get.json())
+        print(result_get.status_code)
+        fields = json.loads(result_get.text)
+        print("=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=",list(fields))
+        return result_get
