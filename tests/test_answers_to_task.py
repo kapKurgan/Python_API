@@ -64,3 +64,11 @@ class TestAnswersToTask():
     def test_8_8_4(self):
         result_delete = AnswersToTask.create_test_8_8_4()
         print("==================== result_post =", result_delete)
+
+    def test_8_9_3(self):
+        result_delete = AnswersToTask.create_test_8_9_3()
+        print("==================== result_post =", result_delete)
+
+    def test_8_9_4(self):
+        result_delete = AnswersToTask.create_test_8_9_4()
+        print("==================== result_post =", result_delete)

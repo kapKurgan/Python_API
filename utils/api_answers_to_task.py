@@ -231,3 +231,35 @@ class AnswersToTask():
         fields = json.loads(result_get.text)
         print(list(fields))
         return result_get
+
+    @staticmethod
+    def create_test_8_9_3():
+        url = "https://dog.ceo/api/breeds/image/random/100"
+        print("\n#################### create_test_8_9_3")
+        print(url)
+        result_get = requests.get(url)
+        check = result_get.json()
+        print(result_get.status_code)
+        fields = json.loads(result_get.text)
+        check_info = check.get('message')      # получить значение, которое находится в поле 'message'
+        print(len(check_info), check_info)
+        return check_info
+
+    @staticmethod
+    def create_test_8_9_4():
+        url = "https://dog.ceo/api/breed/hound/images"
+        print("\n#################### create_test_8_9_4")
+        print(url)
+        result_get = requests.get(url)
+        check = result_get.json()
+        print(result_get.status_code)
+        fields = json.loads(result_get.text)
+        check_info = check.get('message')       # получить значение, которое находится в поле 'message'
+        print(len(check_info))                  # 'hound-english'
+        a = 0
+        for i in check_info:
+            if 'hound-english' in i:
+                a += 1
+        print("a =", a)
+
+        return a
