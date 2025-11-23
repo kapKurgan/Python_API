@@ -183,3 +183,25 @@ class AnswersToTask():
         print(result_put.json())
         print(result_put.status_code)
         return result_put
+
+# https://stepik.org/lesson/846657/step/1?unit=850409
+    @staticmethod
+    def create_test_8_6_3():
+        url = "https://petstore.swagger.io/v2/store/order/1"
+        print("\n#################### create_test_8_6_3")
+        print(url)
+        result_delete = requests.delete(url)
+        print(result_delete.json())
+        print(result_delete.status_code)
+        return result_delete
+
+    @staticmethod
+    def create_test_8_6_4():
+        url = "https://reqres.in/api/users/2"
+        headers = {"x-api-key": "reqres-free-v1"}
+        print("\n#################### create_test_8_6_4")
+        print(url)
+        result_delete = requests.delete(url, headers=headers)
+#        print(result_delete.json())
+        print(result_delete.status_code)
+        return result_delete
