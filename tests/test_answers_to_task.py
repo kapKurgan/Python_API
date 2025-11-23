@@ -40,3 +40,11 @@ class TestAnswersToTask():
     def test_8_3_6(self):
         result_get = AnswersToTask.create_test_8_3_6()  # вызов метода по созданию новой локации
         print("==================== result_post =", result_get)
+
+    def test_8_5_3(self):
+        result_get = AnswersToTask.create_test_8_5_3()  # вызов метода по созданию новой локации
+        print("==================== result_post =", result_get)
+
+    def test_8_5_4(self):
+        result_get = AnswersToTask.create_test_8_5_4()  # вызов метода по созданию новой локации
+        print("==================== result_post =", result_get)

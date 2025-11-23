@@ -132,3 +132,54 @@ class AnswersToTask():
         print(result_get.json())
         print(result_get.status_code)
         return result_get
+
+# https://stepik.org/lesson/846654/step/1?unit=850406
+    @staticmethod
+    def create_test_8_5_3():
+        json_put = [
+            {
+                "id": 1,
+                "category": {
+                    "id": 1,
+                    "name": "Bobik"
+                },
+                "name": "doggie",
+                "photoUrls": [
+                    "string"
+                ],
+                "tags": [
+                    {
+                        "id": "1",
+                        "name": "Bob"
+                    }
+                ],
+                "status": "available"
+            }
+        ]
+        url = "https://petstore.swagger.io/v2/pet"
+        print("\n#################### create_test_8_5_3")
+        print(url)
+        result_put = requests.put(url, json=json_put)
+        print(result_put.json())
+        print(result_put.status_code)
+        return result_put
+
+    @staticmethod
+    def create_test_8_5_4():
+        headers = {
+            "x-api-key": "reqres-free-v1"
+        }
+
+        json_put = [
+            {
+                "name": "morpheus",
+                "job": "zion resident"
+            }
+        ]
+        url = "https://reqres.in/api/users/3"
+        print("\n#################### create_test_8_5_4")
+        print(url)
+        result_put = requests.put(url, json=json_put, headers=headers)
+        print(result_put.json())
+        print(result_put.status_code)
+        return result_put
