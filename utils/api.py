@@ -1,5 +1,6 @@
 from .http_methods import HttpMethods                        # импорт класса HttpMethods
 
+
 BASE_URL = "https://rahulshettyacademy.com"
 KEY = "?key=qaclick123"
 
@@ -34,5 +35,4 @@ class GoogleMapsApi():
         print(result_post.json())
         print(result_post.status_code)
         return result_post
-
 
