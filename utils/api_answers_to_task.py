@@ -3,6 +3,7 @@ import requests
 class AnswersToTask():
     """   Класс содержащий методы, для тестирования заданий по api   """
 
+# https://stepik.org/lesson/846652/step/1?unit=850404
     @staticmethod
     def create_test_8_2_9():
         headers = {
@@ -86,3 +87,48 @@ class AnswersToTask():
         print(result_post.json())
         print(result_post.status_code)
         return result_post
+
+# https://stepik.org/lesson/846653/step/1?unit=850405
+    @staticmethod
+    def create_test_8_3_3():
+        headers = { "x-api-key": "reqres-free-v1" }
+        url = "https://reqres.in/api/users/2"
+        print("\n#################### create_test_8_3_3")
+        print(url)
+        result_get = requests.get(url, headers=headers)
+        print(result_get.json())
+        print(result_get.status_code)
+        return result_get
+
+    @staticmethod
+    def create_test_8_3_4():
+        headers = { "x-api-key": "reqres-free-v1" }
+        url = "https://reqres.in/api/users?page=2"
+        print("\n#################### create_test_8_3_4")
+        print(url)
+        result_get = requests.get(url, headers=headers)
+        print(result_get.json())
+        print(result_get.status_code)
+        return result_get
+
+    @staticmethod
+    def create_test_8_3_5():
+        headers = { "x-api-key": "reqres-free-v1" }
+        url = "https://reqres.in/api/users/15"
+        print("\n#################### create_test_8_3_5")
+        print(url)
+        result_get = requests.get(url, headers=headers)
+        print(result_get.json())
+        print(result_get.status_code)
+        return result_get
+
+    @staticmethod
+    def create_test_8_3_6():
+        headers = { "x-api-key": "reqres-free-v1" }
+        url = "https://reqres.in/api/unknown/2"
+        print("\n#################### create_test_8_3_6")
+        print(url)
+        result_get = requests.get(url, headers=headers)
+        print(result_get.json())
+        print(result_get.status_code)
+        return result_get
