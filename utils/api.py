@@ -5,6 +5,7 @@ BASE_URL = "https://rahulshettyacademy.com"     # Базовый адрес
 KEY = "?key=qaclick123"
 POST_RESOURCE = "/maps/api/place/add/json"      # ресурс метода POST
 GET_RESOURCE = "/maps/api/place/get/json"       # ресурс метода Get
+PUT_RESOURCE = "/maps/api/place/update/json"    # ресурс метода Put
 
 
 class GoogleMapsApi():
@@ -48,5 +49,22 @@ class GoogleMapsApi():
         print(result_get.json())
         print(result_get.status_code)
         return result_get
+
+    @staticmethod
+    def put_new_place(place_id):
+        """Метод для изменения новой локации"""
+
+        put_url = BASE_URL + PUT_RESOURCE + KEY
+        print(put_url)
+        json_for_update_new_location = {
+            "place_id": place_id,
+            "address": "100 Lenina street, RU",
+            "key": "qaclick123"
+        }
+        result_put = HttpMethods.put(put_url, json_for_update_new_location)
+        print(result_put.json())
+        print(result_put.status_code)
+        return result_put
+
 
 

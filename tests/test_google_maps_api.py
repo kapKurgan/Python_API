@@ -17,3 +17,9 @@ class TestCreatePlace():
 
         print(">>>>>>>>>>>>>   Метод GET POST")
         result_get = GoogleMapsApi.get_new_place(place_id)      # отправка метода Get
+
+        print(">>>>>>>>>>>>>   Метод PUT")
+        result_put = GoogleMapsApi.put_new_place(place_id)  # изменение данных о созданной локации
+
+        print(">>>>>>>>>>>>>   Метод GET PUT")
+        result_get = GoogleMapsApi.get_new_place(place_id)  # отправка метода Get
