@@ -1,0 +1,52 @@
+01/52 : Ackbar
+02/52 : Adi Gallia
+03/52 : Anakin Skywalker
+04/52 : Arvel Crynyd
+05/52 : Ayla Secura
+06/52 : Bail Prestor Organa
+07/52 : Beru Whitesun lars
+08/52 : Bib Fortuna
+09/52 : Biggs Darklighter
+10/52 : Boba Fett
+11/52 : Bossk
+12/52 : C-3PO
+13/52 : Chewbacca
+14/52 : Darth Vader
+15/52 : Dooku
+16/52 : Eeth Koth
+17/52 : Greedo
+18/52 : Grievous
+19/52 : Han Solo
+20/52 : IG-88
+21/52 : Jabba Desilijic Tiure
+22/52 : Jek Tono Porkins
+23/52 : Ki-Adi-Mundi
+24/52 : Kit Fisto
+25/52 : Lando Calrissian
+26/52 : Leia Organa
+27/52 : Lobot
+28/52 : Luke Skywalker
+29/52 : Luminara Unduli
+30/52 : Mace Windu
+31/52 : Mon Mothma
+32/52 : Nien Nunb
+33/52 : Nute Gunray
+34/52 : Obi-Wan Kenobi
+35/52 : Owen Lars
+36/52 : Padmé Amidala
+37/52 : Palpatine
+38/52 : Plo Koon
+39/52 : Poggle the Lesser
+40/52 : R2-D2
+41/52 : R4-P17
+42/52 : R5-D4
+43/52 : Raymus Antilles
+44/52 : Saesee Tiin
+45/52 : Shaak Ti
+46/52 : Sly Moore
+47/52 : Tarfful
+48/52 : Tion Medon
+49/52 : Wedge Antilles
+50/52 : Wicket Systri Warrick
+51/52 : Wilhuff Tarkin
+52/52 : Yoda
