@@ -1,5 +1,4 @@
 #  pytest -v -s tests\test_google_maps_api.py
-import json
 
 from ..utils.api import GoogleMapsApi
 from ..utils.checking import Checking

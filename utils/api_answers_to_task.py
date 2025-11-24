@@ -1,5 +1,5 @@
 import json
-
+from ..utils.logger import Logger
 import requests
 
 class AnswersToTask():
@@ -16,9 +16,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/users"
         print("\n#################### create_test_8_2_9")
         print(url)
+        Logger.add_request(url, method="POST")
         result_post = requests.post(url, json=json_post, headers=headers)
         print(result_post.json())
         print(result_post.status_code)
+        Logger.add_response(result_post)
         return result_post
 
     @staticmethod
@@ -31,9 +33,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/register"
         print("\n#################### create_test_8_2_10")
         print(url)
+        Logger.add_request(url, method="POST")
         result_post = requests.post(url, json=json_post, headers=headers)
         print(result_post.json())
         print(result_post.status_code)
+        Logger.add_response(result_post)
         return result_post
 
     @staticmethod
@@ -55,9 +59,11 @@ class AnswersToTask():
         url = "https://petstore.swagger.io/v2/user/createWithArray"
         print("\n#################### create_test_8_2_11")
         print(url)
+        Logger.add_request(url, method="POST")
         result_post = requests.post(url, json=json_post, headers=headers)
         print(result_post.json())
         print(result_post.status_code)
+        Logger.add_response(result_post)
         return result_post
 
     @staticmethod
@@ -71,9 +77,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/login"
         print("\n#################### create_test_8_2_12")
         print(url)
+        Logger.add_request(url, method="POST")
         result_post = requests.post(url, json=json_post, headers=headers)
         print(result_post.json())
         print(result_post.status_code)
+        Logger.add_response(result_post)
         return result_post
 
     @staticmethod
@@ -85,9 +93,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/login"
         print("\n#################### create_test_8_2_13")
         print(url)
+        Logger.add_request(url, method="POST")
         result_post = requests.post(url, json=json_post, headers=headers)
         print(result_post.json())
         print(result_post.status_code)
+        Logger.add_response(result_post)
         return result_post
 
 # https://stepik.org/lesson/846653/step/1?unit=850405
@@ -97,9 +107,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/users/2"
         print("\n#################### create_test_8_3_3")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url, headers=headers)
         print(result_get.json())
         print(result_get.status_code)
+        Logger.add_response(result_get)
         return result_get
 
     @staticmethod
@@ -108,9 +120,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/users?page=2"
         print("\n#################### create_test_8_3_4")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url, headers=headers)
         print(result_get.json())
         print(result_get.status_code)
+        Logger.add_response(result_get)
         return result_get
 
     @staticmethod
@@ -119,9 +133,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/users/15"
         print("\n#################### create_test_8_3_5")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url, headers=headers)
         print(result_get.json())
         print(result_get.status_code)
+        Logger.add_response(result_get)
         return result_get
 
     @staticmethod
@@ -130,9 +146,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/unknown/2"
         print("\n#################### create_test_8_3_6")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url, headers=headers)
         print(result_get.json())
         print(result_get.status_code)
+        Logger.add_response(result_get)
         return result_get
 
 # https://stepik.org/lesson/846654/step/1?unit=850406
@@ -161,9 +179,11 @@ class AnswersToTask():
         url = "https://petstore.swagger.io/v2/pet"
         print("\n#################### create_test_8_5_3")
         print(url)
+        Logger.add_request(url, method="PUT")
         result_put = requests.put(url, json=json_put)
         print(result_put.json())
         print(result_put.status_code)
+        Logger.add_response(result_put)
         return result_put
 
     @staticmethod
@@ -181,9 +201,11 @@ class AnswersToTask():
         url = "https://reqres.in/api/users/3"
         print("\n#################### create_test_8_5_4")
         print(url)
+        Logger.add_request(url, method="PUT")
         result_put = requests.put(url, json=json_put, headers=headers)
         print(result_put.json())
         print(result_put.status_code)
+        Logger.add_response(result_put)
         return result_put
 
 # https://stepik.org/lesson/846657/step/1?unit=850409
@@ -192,9 +214,11 @@ class AnswersToTask():
         url = "https://petstore.swagger.io/v2/store/order/1"
         print("\n#################### create_test_8_6_3")
         print(url)
+        Logger.add_request(url, method="DELETE")
         result_delete = requests.delete(url)
         print(result_delete.json())
         print(result_delete.status_code)
+        Logger.add_response(result_delete)
         return result_delete
 
     @staticmethod
@@ -203,9 +227,11 @@ class AnswersToTask():
         headers = {"x-api-key": "reqres-free-v1"}
         print("\n#################### create_test_8_6_4")
         print(url)
+        Logger.add_request(url, method="DELETE")
         result_delete = requests.delete(url, headers=headers)
 #        print(result_delete.json())
         print(result_delete.status_code)
+        Logger.add_response(result_delete)
         return result_delete
 
     @staticmethod
@@ -213,11 +239,13 @@ class AnswersToTask():
         url = "https://catfact.ninja/fact?max_length=100"
         print("\n#################### create_test_8_8_3")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url)
         print(result_get.json())
         print(result_get.status_code)
         fields = json.loads(result_get.text)
         print(list(fields))
+        Logger.add_response(result_get)
         return result_get
 
     @staticmethod
@@ -225,11 +253,13 @@ class AnswersToTask():
         url = "https://catfact.ninja/facts?max_length=100&limit=5"
         print("\n#################### create_test_8_8_4")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url)
         print(result_get.json())
         print(result_get.status_code)
         fields = json.loads(result_get.text)
         print(list(fields))
+        Logger.add_response(result_get)
         return result_get
 
     @staticmethod
@@ -237,17 +267,20 @@ class AnswersToTask():
         url = "https://dog.ceo/api/breeds/image/random/100"
         print("\n#################### create_test_8_9_3")
         print(url)
+        Logger.add_request(url, method="GET")
         result_get = requests.get(url)
         check = result_get.json()
         print(result_get.status_code)
         fields = json.loads(result_get.text)
         check_info = check.get('message')      # получить значение, которое находится в поле 'message'
         print(len(check_info), check_info)
+        Logger.add_response(result_get)
         return check_info
 
     @staticmethod
     def create_test_8_9_4():
         url = "https://dog.ceo/api/breed/hound/images"
+        Logger.add_request(url, method="GET")
         print("\n#################### create_test_8_9_4")
         print(url)
         result_get = requests.get(url)
@@ -261,5 +294,5 @@ class AnswersToTask():
             if 'hound-english' in i:
                 a += 1
         print("a =", a)
-
+        Logger.add_response(result_get)
         return a
