@@ -32,3 +32,31 @@ pytest -v --tb=line ИМЯ_ФАЙЛА.py
 ```bash
 pip install -r requirements.txt
 ```
+
+# Добавлены отчеты Allure
+
+## Как запускать тесты
+
+Чтобы запустить тестовый файл, используйте следующую команду:
+
+```bash
+pytest -v -s --tb=line --alluredir=allure-results tests\test_google_maps_api.py
+```
+
+Отчет формируется в папке allure-results и запускается для просмотра командой:
+
+```bash
+allure serve allure-results
+```
+
+![alt tag](https://github.com/kapKurgan/Python_API/blob/main/github_pict/allure_api_1.png)
+
+![alt tag](https://github.com/kapKurgan/Python_API/blob/main/github_pict/allure_api_2.png)
+
+![alt tag](https://github.com/kapKurgan/Python_API/blob/main/github_pict/allure_api_3.png)
+
+![alt tag](https://github.com/kapKurgan/Python_API/blob/main/github_pict/allure_api_4.png)
+
+![alt tag](https://github.com/kapKurgan/Python_API/blob/main/github_pict/allure_api_5.png)
+
+![alt tag](https://github.com/kapKurgan/Python_API/blob/main/github_pict/allure_api_6.png)

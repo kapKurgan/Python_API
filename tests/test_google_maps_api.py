@@ -1,13 +1,18 @@
 #  pytest -v -s tests\test_google_maps_api.py
+#  pytest -v -s --tb=line --alluredir=allure-results tests\test_google_maps_api.py
+#  allure serve allure-results
 
 from ..utils.api import GoogleMapsApi
 from ..utils.checking import Checking
+# File -> Settings.. -> Project: PythonWorkSpace -> Project Interpreter -> + -> ввести: "allure-pytest" -> Install Package
+import allure
 
 
-
+@allure.epic("Тест создания новой локации")
 class TestCreatePlace():
     """Класс содержащий тест по работе с локацией"""
 
+    @allure.description("Тесты: создание, изменение, удаление новой локации")
     def test_create_new_place(self):
         """Тест по созданию, изменние и удаление новой локации"""
 
